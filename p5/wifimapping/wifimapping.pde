@@ -15,7 +15,7 @@ void setup() {
   size(displayWidth, displayHeight, P2D);
   frameRate(60);
   textAlign(CENTER);
-  colorMode(HSB, 360, 100, 100, 100);
+//  colorMode(HSB, 360, 100, 100, 100);
   smooth(8);
   background(0);
 
@@ -49,7 +49,6 @@ class WifiNode {
   float deg, rad, len, px, py;
   
   WifiNode(String name, String macaddress, int value) {
-    this.id = id;
     this.name = name;
     this.macaddress = macaddress;
     this.value = value; 
@@ -57,7 +56,7 @@ class WifiNode {
   
   void update(int i, int total) {
     id = i;
-    total = total;
+    this.total = total;
 
     deg = map(id,0,nodes.size(),0,360);
     rad = radians(deg);
